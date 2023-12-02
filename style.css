@@ -37,11 +37,11 @@ section {
 .logo {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: 0 30px;
     padding: 0;
 }
 
-.logo img {
+.logo svg {
     width: 60px;
     height: 100px; 
 }
@@ -60,6 +60,7 @@ section {
     display: flex;
     align-items: center;
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .items:hover{
@@ -182,11 +183,16 @@ menu {
     border: transparent;
     font-weight: 700;
     font-size: 16px;
+    cursor: pointer;
 }
 
 button:active{
     background: blue;
     color: azure;
+}
+
+button:hover {
+    border: 2px solid blue;
 }
 
 /* Main and projects */
