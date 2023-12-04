@@ -1,0 +1,76 @@
+.book-read-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    border-left: 10px solid red;
+    max-width: 300px;
+    position: relative;
+    z-index: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.read-checked {
+    border-left: 10px solid green; 
+}
+
+.book-read {
+    display: flex;
+    align-items: center;
+}
+
+div > input {
+    cursor: pointer;
+}
+
+.card > button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background-color: white;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.card > button:hover{
+    background: red;
+    color: white;
+}
+
+.edit-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 45px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.book-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-top: 8px;
+    margin-bottom: 0.5rem;
+    font-style: oblique;
+    text-decoration: underline;
+    text-decoration-thickness:0.15rem;
+}
+
+.book-author {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.book-pages {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
