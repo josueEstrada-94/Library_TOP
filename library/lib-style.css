@@ -211,3 +211,16 @@ div > input {
     justify-content: center;
     padding-bottom: 20px;
 }
+
+.form-add-button {
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background: royalblue;
+    color: azure;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
