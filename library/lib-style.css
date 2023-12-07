@@ -4,11 +4,20 @@
     margin-right: 5px;
 }
 
+.book-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-left: 10px;
+}
+
 .card {
     background: white;
     border-radius: 10px;
     border-left: 10px solid red;
-    max-width: 300px;
+    width: 300px;
+    /* min-height: 270px; */
     position: relative;
     z-index: 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
