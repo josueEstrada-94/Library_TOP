@@ -1,11 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
 
 :root {
-    --sec-color: azure;
-    --back-sect: #bfdbfe;
+    --body-back:rgb(234, 234, 228);
+    --hover-color: azure;
+    --sect-back: #bfdbfe;
+    --text-color: black;
+    --svg-color: black;
+    --nav-back: white;
+    --nav-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    --hover-border: 2px solid blue;
+    --card-back: white;
+    --modal-back: #fefefe;
+    --close-color: #aaaaaa;
 }
+
+.darkmode {
+    --body-back: black;
+    --sect-back: #0e53a6;
+    --text-color: azure;
+    --hover-color: rgb(178, 211, 249);
+    --svg-color: white;
+    --nav-back: rgb(67, 64, 64);
+    --nav-shadow: rgba(255, 255, 255, 0.55) 0px 5px 15px;
+    --hover-border: 2px solid rgb(211, 211, 240);
+    --main-back: rgb(48, 48, 48);
+    --card-back: rgb(67, 64, 64);
+    --edit-icon-back: white;
+    --modal-back: rgb(67, 64, 64);
+    --close-color: #efe6e6;
+
+}
+
 body{
-    background: rgb(234, 234, 228);
+    background: var(--body-back);
+    color: var(--text-color);
     padding: 0;
     margin: 0;
 }
@@ -31,7 +59,7 @@ section {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 15px;
-    background: var(--back-sect);
+    background: var(--sect-back);
 }
 
 .logo {
@@ -43,11 +71,13 @@ section {
 
 .logo svg {
     width: 60px;
-    height: 100px; 
+    height: 100px;
+    fill: var(--svg-color);
 }
 
 .logo h1 {
     font-size: 35px;
+    color: var(--text-color);
 }
 
 .home-etc, .setting-etc {
@@ -61,16 +91,18 @@ section {
     align-items: center;
     margin: 0 15px;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 .items:hover{
-    color: var(--sec-color);
+    color: var(--hover-color);
 }
 
 .items > svg {
     width: 20px;
     height: 20px;
     padding-right: 10px;
+    fill: var(--svg-color);
 }
 
 /* Nav */
@@ -78,8 +110,9 @@ section {
 .nav-menu{
     grid-column: 2/4;
     grid-row: 1/2;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background: white;
+    box-shadow: var(--nav-shadow);
+    background: var(--nav-back);
+    color: var(--text-color);
 }
 
 nav {
@@ -91,9 +124,11 @@ nav {
 /* Nav - Search bar - Profile */
 
 nav svg {
-    width: 30px;
-    height: 35px;
+    width: 40px;
+    height: 45px;
     padding: 0 20px;
+    fill: var(--svg-color);
+    cursor: pointer;
 }
 
 .search {
@@ -133,6 +168,7 @@ nav svg {
     border-radius: 22px;
     border: none;
     background: rgb(242, 239, 215);
+    color: var(--text-color);
 }
 
 /* Nav - General profile - Buttons */
@@ -176,7 +212,8 @@ menu {
 }
 
 .buttons button {
-    background: var(--back-sect);
+    background: var(--sect-back);
+    color: var(--text-color);
     border-radius: 20px;
     height: 40px;
     width: 110px;
@@ -192,7 +229,7 @@ button:active{
 }
 
 button:hover {
-    border: 2px solid blue;
+    border: var(--hover-border);
 }
 
 /* Main and projects */
@@ -201,87 +238,16 @@ main {
     grid-column: 2 / 4;
     grid-row: 2 / 4;
     height: 100vh;
+    width: 86vw;
+    background: var(--main-back);
 }
 
 main>h1 {
     padding-left: 20px;
     font-size: 28px;
+    color: var(--text-color);
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin: 10px;
-}
 
-.cards>div{
-    background: white;
-    border-radius: 8px;
-    border-left: 7px solid rgb(200, 200, 3);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-}
-.card-icons svg {
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-}
 
-.card-icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-/* Aside - Announcements */
-
-aside {
-    grid-column: 3/4;
-    grid-row: 2 / 4;
-}
-
-.anno-box {
-    background: white;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.anno-box>div{
-    padding: 0 10px;
-    margin: 0;
-}
-
-/* Aside - Trending and other profiles. */
-
-.trend-box {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.trending {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0;
-    margin: 10px;
-    padding: 10px;
-}
-
-.trending>div>h3{
-    padding: 0;
-    margin: 0;
-    
-}
-
-.trending>div>p{
-    margin: 0;
-   
-
-}
